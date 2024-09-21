@@ -33,5 +33,5 @@ match priority:
     case _:
         reminder = "Invalid priority entered. Please enter high, medium, or low."
 
-# Print the customized reminder
-print(f"\nReminder: {reminder}")
+# Print the customized reminder in the required format
+print(f"Reminder: {reminder}")
