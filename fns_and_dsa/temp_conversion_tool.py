@@ -1,14 +1,13 @@
-# Define global conversion factors
+# Global conversion factors
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5  # Ensure exact spacing and format
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 
+# Conversion functions
 def convert_to_celsius(fahrenheit):
-    """Convert Fahrenheit to Celsius using the global conversion factor."""
     return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 def convert_to_fahrenheit(celsius):
-    """Convert Celsius to Fahrenheit using the global conversion factor."""
-    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
+    return celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + 32
 
 def main():
     """Main function for user interaction."""
@@ -30,4 +29,5 @@ def main():
 
 if __name__ == "__main__":
     main()  # Execute the main function
+
 
