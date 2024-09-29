@@ -27,19 +27,8 @@
 #             return "Cannot divide by zero"
 #     else:
 #         return "Invalid operation"
-
 def perform_operation(num1, num2, operation):
-    """
-    Performs the specified arithmetic operation.
-
-    Args:
-        num1 (float): The first number.
-        num2 (float): The second number.
-        operation (str): The operation to perform (add, subtract, multiply, divide).
-
-    Returns:
-        float or str: The result of the operation or an error message.
-    """
+    """Perform basic arithmetic operations."""
     if operation == 'add':
         return num1 + num2
     elif operation == 'subtract':
@@ -47,9 +36,21 @@ def perform_operation(num1, num2, operation):
     elif operation == 'multiply':
         return num1 * num2
     elif operation == 'divide':
-        if num2 != 0:
-            return num1 / num2
+        if num2 == 0:  # Check for divide by zero
+            return "Error: Cannot divide by zero."
         else:
-            return "Cannot divide by zero"
+            return num1 / num2
     else:
-        return "Invalid operation"
+        return "Invalid operation."
+
+def main():
+    print("Welcome to the Arithmetic Operations program.")
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    operation = input("Enter the operation (add, subtract, multiply, divide): ").lower()
+    
+    result = perform_operation(num1, num2, operation)
+    print(f"The result is: {result}")
+
+if __name__ == "__main__":
+    main()
