@@ -11,4 +11,7 @@ while row < size:
         print("*", end="")  # To print without a newline
     print()  # To move to the next line after each row
     row += 1  # Increment the row counter
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
